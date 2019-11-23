@@ -9,7 +9,7 @@
     </div>
 
     <div
-      class="sm:px-4 flex-grow text-gray-700 capitalize mb-4 md:mb-0 break-words"
+      class="pr-2 lg:px-4 flex-grow text-gray-700 capitalize mb-4 md:mb-0 break-words"
     >
       {{ statement.title.toLowerCase() }}
     </div>

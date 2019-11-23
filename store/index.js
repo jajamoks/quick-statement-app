@@ -3,6 +3,7 @@ import statementFromText from '@/helpers/statement'
 export const state = () => ({
   statement: null,
   categories: [],
+  months: [],
   reports: null
 })
 
@@ -22,8 +23,12 @@ export const mutations = {
     }
   },
 
-  setReports(state, data) {
-    state.reports = data
+  setReports(state, reports) {
+    state.reports = reports
+  },
+
+  setMonths(state, months) {
+    state.months = months
   }
 }
 
@@ -64,5 +69,13 @@ export const actions = {
 
     // Cleanup for the UI
     context.commit('setReports', data)
+  },
+
+  async months(context) {
+    // Get report from the API
+    const { data } = await this.$axios.get(`/api/months`)
+
+    // Cleanup for the UI
+    context.commit('setMonths', data)
   }
 }
