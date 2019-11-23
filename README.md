@@ -1,8 +1,14 @@
-# finances-bind
+# Quick Statement App
 
-> Mind Blowing Personal Finances App
+App built with Vue to quickly record income/expenses for every month.
 
-## Build Setup
+Once you upload your bank statement CSV file, then [API](https://github.com/ReekenX/quick-statement-api) will analyze it and will map every line to some category. At first you will have to do this manually (for first statement or part of first statement). This API learns over time and improves its accuracy to bind categories on its own.
+
+Built with NuxtJS so supports server side rendering.
+
+Built with TailwindCSS so write just 2 lines of CSS. Mobile first APP.
+
+## Installing
 
 ``` bash
 # install dependencies
@@ -18,5 +24,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
