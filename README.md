@@ -8,6 +8,16 @@ Built with NuxtJS so supports server side rendering.
 
 Built with TailwindCSS so wrote just 2 lines of CSS. Mobile first APP.
 
+## Screenshots
+
+![Index Page](screenshots/v1.0/index.png)
+
+![Statement Analysis Page](screenshots/v1.0/statement.png)
+
+![Reports Index Page](screenshots/v1.0/reports_index.png)
+
+![Reports Detail Page](screenshots/v1.0/reports_detail.png)
+
 ## Installing
 
 ``` bash
