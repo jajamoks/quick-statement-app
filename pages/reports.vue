@@ -11,7 +11,7 @@
         {{ $t('Available Reports') }}
       </h1>
 
-      <div v-for="month in $store.state.months">
+      <div v-for="month in $store.state.months" class="mb-4">
         <button
           @click="
             $router.push({
