@@ -61,7 +61,7 @@ export default {
 
   proxy: {
     '/api': {
-      target: 'http://localhost:8000/',
+      target: process.env.API_URL || 'http://localhost:8000/',
       pathRewrite: { '^/api': '' },
       changeOrigin: false,
       prependPath: false
