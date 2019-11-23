@@ -6,7 +6,7 @@ Once you upload your bank statement CSV file, then [API](https://github.com/Reek
 
 Built with NuxtJS so supports server side rendering.
 
-Built with TailwindCSS so write just 2 lines of CSS. Mobile first APP.
+Built with TailwindCSS so wrote just 2 lines of CSS. Mobile first APP.
 
 ## Installing
 
