@@ -18,6 +18,14 @@ Built with TailwindCSS so wrote just 2 lines of CSS. Mobile first APP.
 
 ![Reports Detail Page](screenshots/v1.0/reports_detail.png)
 
+## Launch Quickly
+
+Launch project with Docker:
+
+  docker-compose up --build
+
+It will be available on your browser on `localhost:3000`.
+
 ## Installing
 
 ``` bash
