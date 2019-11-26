@@ -15,5 +15,6 @@
   "New Category": "Nauja kategorija",
   "Category Title...": "Kategorijos pavadinimas...",
   "Available Reports": "Ataskaitos",
-  "Reports": "Ataskaitos"
+  "Reports": "Ataskaitos",
+  "{year}-{month} Reports": "{year}-{month} Ataskaita"
 }

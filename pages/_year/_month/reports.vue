@@ -88,7 +88,7 @@
 export default {
   head() {
     return {
-      title: `${this.$route.params.year}-${this.$route.params.month} Reports`
+      title: this.$t('{year}-{month} Reports', this.$route.params)
     }
   },
 
