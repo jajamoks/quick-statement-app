@@ -61,10 +61,12 @@ export default {
 
   proxy: {
     '/api': {
-      target: process.env.API_URL || 'http://localhost:8000/',
+      target:
+        process.env.NODE_ENV === 'production'
+          ? 'https://api.finansai.jarmalavicius.lt'
+          : 'http://localhost:8000',
       pathRewrite: { '^/api': '' },
-      changeOrigin: false,
-      prependPath: false
+      secure: false
     }
   },
 
