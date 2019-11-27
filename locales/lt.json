@@ -1,6 +1,5 @@
 {
   "Welcome": "Pagrindinis",
-  "Welcome to Quick Statement!": "Jus sveikina \"Quick Statement\" programa",
   "Upload your bank statement for this or previous month to start analysis.": "Įkelkite savo praėjusio ar šio mėnesio banko išrašą ir pradėkite analizę.",
   "Upload": "Įkelti",
   "Statement Analysis": "Išrašo analizė",
@@ -16,5 +15,7 @@
   "Category Title...": "Kategorijos pavadinimas...",
   "Available Reports": "Ataskaitos",
   "Reports": "Ataskaitos",
-  "{year}-{month} Reports": "{year}-{month} Ataskaita"
+  "{year}-{month} Reports": "{year}-{month} Ataskaita",
+  "Homepage": "Pagrindinis",
+  "Upload Statement": "Įkelti išrašą"
 }
