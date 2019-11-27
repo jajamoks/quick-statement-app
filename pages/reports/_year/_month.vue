@@ -5,9 +5,9 @@
         <div class="bg-blue-600 text-white rounded p-4">
           <div class="text-small">{{ $t('Date') }}</div>
           <div class="text-4xl font-bold">
-            {{ $store.state.reports.date.year }}
+            {{ $store.state.report.date.year }}
             -
-            {{ $store.state.reports.date.month }}
+            {{ $store.state.report.date.month }}
           </div>
         </div>
       </div>
@@ -16,7 +16,7 @@
         <div class="bg-green-500 text-white rounded p-4">
           <div class="text-small">{{ $t('Total Income') }}</div>
           <div class="text-4xl font-bold">
-            {{ numberWithCommas($store.state.reports.total.income) }} &euro;
+            {{ numberWithCommas($store.state.report.total.income) }} &euro;
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="bg-red-400 text-white rounded p-4">
           <div class="text-small">{{ $t('Total Expense') }}</div>
           <div class="text-4xl font-bold">
-            {{ numberWithCommas($store.state.reports.total.expense) }} &euro;
+            {{ numberWithCommas($store.state.report.total.expense) }} &euro;
           </div>
         </div>
       </div>
@@ -52,12 +52,12 @@
 
     <div class="md:flex flex-wrap">
       <div
-        v-for="(val, title) in $store.state.reports.income"
+        v-for="(val, title) in $store.state.report.income"
         class="md:w-1/2 lg:w-1/4 p-2"
       >
         <div class="bg-gray-200 rounded p-4 text-gray-800">
-          <div class="text-small">{{ title }}</div>
-          <div class="text-5xl font-bold">
+          <div class="text-small text-gray-600">{{ title }}</div>
+          <div class="text-5xl font-bold text-gray-700">
             {{ numberWithCommas(val) }} &euro;
           </div>
         </div>
@@ -70,12 +70,12 @@
 
     <div class="md:flex flex-wrap">
       <div
-        v-for="(val, title) in $store.state.reports.expense"
+        v-for="(val, title) in $store.state.report.expense"
         class="md:w-1/2 lg:w-1/4 p-2"
       >
-        <div class="bg-gray-200 rounded p-4 text-gray-800">
-          <div class="text-small">{{ title }}</div>
-          <div class="text-5xl font-bold">
+        <div class="bg-gray-200 rounded p-4">
+          <div class="text-small text-gray-600">{{ title }}</div>
+          <div class="text-5xl font-bold text-gray-700">
             {{ numberWithCommas(val) }} &euro;
           </div>
         </div>
@@ -95,14 +95,14 @@ export default {
   computed: {
     totalLeft() {
       return (
-        this.$store.state.reports.total.income -
-        this.$store.state.reports.total.expense
+        this.$store.state.report.total.income -
+        this.$store.state.report.total.expense
       )
     }
   },
 
   async fetch({ store, params }) {
-    await store.dispatch('reports', params)
+    await store.dispatch('report', params)
   },
 
   methods: {

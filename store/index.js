@@ -3,8 +3,9 @@ import statementFromText from '@/helpers/statement'
 export const state = () => ({
   statement: null,
   categories: [],
-  months: [],
-  reports: null
+  years: [],
+  months: {},
+  report: null
 })
 
 export const mutations = {
@@ -23,12 +24,17 @@ export const mutations = {
     }
   },
 
-  setReports(state, reports) {
-    state.reports = reports
+  setReport(state, report) {
+    state.report = report
   },
 
-  setMonths(state, months) {
-    state.months = months
+  setYears(state, years) {
+    state.years = years
+  },
+
+  setMonths(state, { year, months }) {
+    state.months = {}
+    state.months[year] = months
   }
 }
 
@@ -62,20 +68,28 @@ export const actions = {
     context.commit('setStatement', null)
   },
 
-  async reports(context, dateParams) {
+  async report(context, dateParams) {
     // Get report from the API
     const { year, month } = dateParams
     const { data } = await this.$axios.get(`/api/reports/${year}/${month}`)
 
     // Cleanup for the UI
-    context.commit('setReports', data)
+    context.commit('setReport', data)
   },
 
-  async months(context) {
+  async years(context) {
     // Get report from the API
-    const { data } = await this.$axios.get(`/api/months`)
+    const { data } = await this.$axios.get('/api/years')
 
     // Cleanup for the UI
-    context.commit('setMonths', data)
+    context.commit('setYears', data)
+  },
+
+  async months(context, { year }) {
+    // Get report from the API
+    const { data } = await this.$axios.get(`/api/years/${year}`)
+
+    // Cleanup for the UI
+    context.commit('setMonths', { year, months: data })
   }
 }

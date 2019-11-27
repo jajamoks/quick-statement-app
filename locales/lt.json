@@ -17,5 +17,20 @@
   "Reports": "Ataskaitos",
   "{year}-{month} Reports": "{year}-{month} Ataskaita",
   "Homepage": "Pagrindinis",
-  "Upload Statement": "Įkelti išrašą"
+  "Upload Statement": "Įkelti išrašą",
+  "Choose Years": "Pasirinkite metus",
+  "{year} Monthly Reports:": "{year} m. ataskaitos:",
+  "Quick Statement": "Quick Statement",
+  "month.01": "Sausis",
+  "month.02": "Vasaris",
+  "month.03": "Kovas",
+  "month.04": "Balandis",
+  "month.05": "Gegužė",
+  "month.06": "Birželis",
+  "month.07": "Liepa",
+  "month.08": "Rugpjūtis",
+  "month.09": "Rugsėjis",
+  "month.10": "Spalis",
+  "month.11": "Lapkritis",
+  "month.12": "Gruodis"
 }
