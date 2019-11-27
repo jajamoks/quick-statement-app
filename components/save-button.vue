@@ -56,7 +56,7 @@ export default {
       await this.$store.dispatch('save')
 
       // Redirect to statement month report
-      this.$router.push({ name: 'year-month-reports', params: { year, month } })
+      this.$router.push({ name: 'reports-year-month', params: { year, month } })
     }
   }
 }
