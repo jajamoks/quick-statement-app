@@ -7,7 +7,7 @@
         >
           <nuxt-link
             :to="{ name: 'index' }"
-            class="flex items-center flex-shrink-0 text-white mr-6"
+            class="flex items-center flex-shrink-0 text-white mr-6 no-underline"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,13 +40,13 @@
             <div class="text-lg lg:flex-grow">
               <nuxt-link
                 :to="{ name: 'index' }"
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4"
+                class="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4 no-underline"
               >
                 {{ $t('Homepage') }}
               </nuxt-link>
               <nuxt-link
                 :to="{ name: 'reports' }"
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4"
+                class="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4 no-underline"
               >
                 {{ $t('Reports') }}
               </nuxt-link>

@@ -21,6 +21,7 @@ export const mutations = {
     // Create category if does not exist
     if (!state.categories.includes(categoryTitle)) {
       state.categories.push(categoryTitle)
+      state.categories.sort()
     }
   },
 
