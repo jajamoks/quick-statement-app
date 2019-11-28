@@ -6,8 +6,7 @@
           <div class="text-small">{{ $t('Date') }}</div>
           <div class="text-4xl font-bold">
             {{ $store.state.report.date.year }}
-            -
-            {{ $store.state.report.date.month }}
+            {{ $t(`month.${$store.state.report.date.month}`) }}
           </div>
         </div>
       </div>
